@@ -33,3 +33,4 @@ __pycache__/
 
 # Logs
 *.log/notebooks/ConvLSTM-PyTorch/
+notebooks/modelo_salvador.ipynb
