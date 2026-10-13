@@ -1,0 +1,35 @@
+# Datos de radar meteorológico
+/data/
+
+# Environment
+/envs/
+# Archivos binarios y matrices grandes
+*.nc
+*.nc4
+*.h5
+*.hdf5
+*.grib
+*.grb
+*.bin
+
+# Modelos entrenados y checkpoints
+*.pth
+*.pt
+*.ckpt
+*.onnx
+
+# Resultados de experimentos
+outputs/
+checkpoints/
+runs/
+mlruns/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log/notebooks/ConvLSTM-PyTorch/
