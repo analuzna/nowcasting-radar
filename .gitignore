@@ -35,3 +35,5 @@ __pycache__/
 *.log/notebooks/ConvLSTM-PyTorch/
 notebooks/modelo_salvador.ipynb
 notebooks/ConvLSTM-PyTorch
+notebooks/calendario/
+
