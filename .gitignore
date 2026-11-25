@@ -37,3 +37,5 @@ notebooks/modelo_salvador.ipynb
 notebooks/ConvLSTM-PyTorch
 notebooks/calendario/
 
+# libreria externa 
+radarlib/

@@ -26,13 +26,12 @@ Sobre el punto 4. tengo dudas: debería extenderme un poquito más para no perde
 
 ### Modelo
 
-*basado en **``Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting''** https://doi.org/10.48550/arXiv.1506.04214*
+*basado en **``Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting''** <https://doi.org/10.48550/arXiv.1506.04214>*
 
 La idea es que queremos aprender la evolución de estructuras espacio-temporales. Para eso necesitamos unidades de aprendizaje especializadas en este tipo de estructura, de acá se desprenden las ConvLSTM: una neurona LSTM es una cuya cada estado está definido no solo por el input sino también por los frames previos al mismo siendo este parte de una secuencia temporal. Cada neurona tiene cuatro compuertas que se activan según pesos... Asimismo la estructura espacial es contenida por la arquitectura convolucional. 
 
 ### Loss
-*basado en ``Weather Radar Echo Extrapolation with Dynamic Weight Loss'' https://doi.org/
-10.3390/rs15123138*
+*basado en ``Weather Radar Echo Extrapolation with Dynamic Weight Loss'' <https://doi.org/10.3390/rs15123138>*
 Necesitamos definir una función de minimización que sea capaz de conservar estructura, intensidad y evolución. 
 
 
@@ -162,3 +161,22 @@ output elements are all 3D tensors which preserve all the spatial information. S
 multiple stacked ConvLSTM layers, it has strong representational power which makes it suitable
 for giving predictions in complex dynamical systems like the precipitation nowcasting problem we
 study here.
+
+
+$i_t = \sigma(W_{xi} x_t + W_{hi} h_{t-1} + b_i)$
+
+
+
+$f_t = \sigma(W_{xf} x_t + W_{hf} h_{t-1} + b_f)$
+
+
+
+$c_t = f_t \circ c_{t-1} + i_t \circ \tanh(W_{xc} x_t + W_{hc} h_{t-1} + b_c)$
+
+
+
+$o_t = \sigma(W_{xo} x_t + W_{ho} h_{t-1} + b_o)$
+
+
+
+$h_t = o_t \circ \tanh(c_t)$

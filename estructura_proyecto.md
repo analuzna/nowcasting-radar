@@ -3,7 +3,7 @@
 **radar-nowcasting/**
 
 ├── data/
-│   ├── raw/            # volúmenes de radar originales, intocados (solo lectura)
+│   ├── raw/            # volúmenes de radar originales (solo lectura)
 │   ├── interim/         # post-QC, reproyectados, aún no en grilla final
 │   ├── processed/        # grilla uniforme espacial+temporal, lista para empaquetar
 │   └── packaged/         # secuencias empaquetadas train/val (secuencias) + metadata
