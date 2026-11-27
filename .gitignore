@@ -1,9 +1,5 @@
-# Datos de radar meteorológico
+# Datos
 /data/
-
-# Environment
-/envs/
-# Archivos binarios y matrices grandes
 *.nc
 *.nc4
 *.h5
@@ -11,8 +7,11 @@
 *.grib
 *.grb
 *.bin
+*.npy
+*.npz
+*.zarr
 
-# Modelos entrenados y checkpoints
+# Modelos y checkpoints
 *.pth
 *.pt
 *.ckpt
@@ -31,11 +30,15 @@ __pycache__/
 # Jupyter
 .ipynb_checkpoints/
 
-# Logs
-*.log/notebooks/ConvLSTM-PyTorch/
+# Logs y secretos
+*.log
+.env
+
+# Notebooks que no se versionan
+notebooks/ConvLSTM-PyTorch/
 notebooks/modelo_salvador.ipynb
-notebooks/ConvLSTM-PyTorch
 notebooks/calendario/
 
-# libreria externa 
+# Librería externa (se instala como dependencia)
 radarlib/
+git diff .gitignore
